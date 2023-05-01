@@ -10,12 +10,12 @@ function Header() {
 
   return (
     <nav
-      className="navbar is-fixed-top"
+      className="navbar is-fixed-top is-dark"
       role="navigation"
       aria-label="main navigation"
     >
       <div className="navbar-brand">
-        <a className="navbar-item" href="https://bulma.io">
+        <a className="navbar-item" href="/">
           <img src={logoImage} width="112" height="28" />
         </a>
 
@@ -40,19 +40,19 @@ function Header() {
         <div className="navbar-start">
           <a className="navbar-item">Home</a>
 
-          <a className="navbar-item">Documentation</a>
+          <a className="navbar-item">My Subscriptions</a>
 
-          <div className="navbar-item has-dropdown is-hoverable">
-            <a className="navbar-link">More</a>
+          {/* <div className="navbar-item has-dropdown is-hoverable">
+            <a className="navbar-link">More</a> */}
 
-            <div className="navbar-dropdown">
-              <a className="navbar-item">About</a>
-              <a className="navbar-item">Jobs</a>
-              <a className="navbar-item">Contact</a>
-              <hr className="navbar-divider" />
-              <a className="navbar-item">Report an issue</a>
-            </div>
-          </div>
+          {/* <div className="navbar-dropdown"> */}
+          <a className="navbar-item">My History</a>
+          <a className="navbar-item">My Account</a>
+          {/* <hr className="navbar-divider" /> */}
+          <a className="navbar-item">About</a>
+          <a className="navbar-item">Feedback</a>
+          {/* </div> */}
+          {/* </div> */}
         </div>
 
         <div className="navbar-end">
