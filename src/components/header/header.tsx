@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logoImage from "../../assets/logo.png";
 
 function Header() {
   const [isActive, setActive] = useState(false);
@@ -15,11 +16,7 @@ function Header() {
     >
       <div className="navbar-brand">
         <a className="navbar-item" href="https://bulma.io">
-          <img
-            src="https://bulma.io/images/bulma-logo.png"
-            width="112"
-            height="28"
-          />
+          <img src={logoImage} width="112" height="28" />
         </a>
 
         <a
