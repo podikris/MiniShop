@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import logoImage from "../../assets/logo.png";
 
 function Header() {
   const [isActive, setActive] = useState(false);
+  const [userType] = useState("SHOP");
 
   const handleToggle = () => {
     setActive(!isActive);
@@ -37,23 +38,29 @@ function Header() {
         id="navBarMenu"
         className={`navbar-menu ${isActive ? "is-active" : ""}`}
       >
-        <div className="navbar-start">
-          <a className="navbar-item">Home</a>
-
-          <a className="navbar-item">My Subscriptions</a>
-
-          {/* <div className="navbar-item has-dropdown is-hoverable">
-            <a className="navbar-link">More</a> */}
-
-          {/* <div className="navbar-dropdown"> */}
-          <a className="navbar-item">My History</a>
-          <a className="navbar-item">My Account</a>
-          {/* <hr className="navbar-divider" /> */}
-          <a className="navbar-item">About</a>
-          <a className="navbar-item">Feedback</a>
-          {/* </div> */}
-          {/* </div> */}
-        </div>
+        {userType == "CUSTOMER" ? (
+          <div className="navbar-start">
+            {/* Custface menu items */}
+            <a className="navbar-item">Home</a>
+            <a className="navbar-item">My Subscriptions</a>
+            <a className="navbar-item">My History</a>
+            <a className="navbar-item">My Account</a>
+            {/* Allface menu items */}
+            <a className="navbar-item">About</a>
+            <a className="navbar-item">Feedback</a>
+          </div>
+        ) : (
+          <div className="navbar-start">
+            {/* Shopface menu items */}
+            <a className="navbar-item">Products</a>
+            <a className="navbar-item">Users</a>
+            <a className="navbar-item">Subscriptions</a>
+            <a className="navbar-item">Deliveries</a>
+            {/* Allface menu items */}
+            <a className="navbar-item">About</a>
+            <a className="navbar-item">Feedback</a>
+          </div>
+        )}
 
         <div className="navbar-end">
           <div className="navbar-item">
