@@ -4,9 +4,11 @@
 3. Fixed navbar to top
 4. Change logo
 5. Update menu items - for frontend & backend
+6. Show only shopface or custface menu items. Default to shopface
 
 # Doubts
 1. Now that navbar is fixed to top, how does it play with content? do i need to give space using <html class="has-navbar-fixed-top"> as mentioned in above doc? even in react?
 
 # TODO
 1. Break navbar into multiple components
+2. Change menu items based on login 
