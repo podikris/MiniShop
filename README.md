@@ -18,3 +18,14 @@ firebase login
 npm run build
 firebase deploy 
 https://minieshop-fb5a4.web.app
+
+## Database
+Created a firestore in the same firebase app used for hosting
+setup firestore to asia-south/mumbai
+[] Firestore is set in test mode and not production
+
+## storage
+Photos for products needs this storage
+
+## TODO
+Remove sensitive data in firebase.tsx on check-in automatically.
